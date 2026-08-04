@@ -21,7 +21,7 @@ export default function Footer() {
               <span className="grid h-10 w-10 place-items-center rounded-xl bg-forest-700 text-gold-200">
                 <Wheat className="h-5 w-5" />
               </span>
-              <span className="font-display text-xl font-semibold text-sand-50">Sirari Food Supplies</span>
+              <span className="font-display text-xl font-semibold text-sand-50">Sirari</span>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed">
               {t.footer.tagline}
@@ -35,6 +35,9 @@ export default function Footer() {
               </a>
               <a href={`tel:${company.phoneKE.replace(/\s/g, '')}`} className="flex items-center gap-2 transition-colors hover:text-gold-300">
                 <Phone className="h-4 w-4 text-gold-400" /> {company.phoneKE} <span className="text-xs text-sand-100/50">(Kenya)</span>
+              </a>
+              <a href={`tel:${company.phoneKE2.replace(/\s/g, '')}`} className="flex items-center gap-2 transition-colors hover:text-gold-300">
+                <Phone className="h-4 w-4 text-gold-400" /> {company.phoneKE2} <span className="text-xs text-sand-100/50">(Kenya)</span>
               </a>
               <a href={`mailto:${company.email}`} className="flex items-center gap-2 transition-colors hover:text-gold-300">
                 <Mail className="h-4 w-4 text-gold-400" /> {company.email}

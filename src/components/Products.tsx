@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Check, Minus, Package, Plus, ShoppingBag, X, MapPin, CreditCard, Navigation } from 'lucide-react';
 import { riceProducts, paymentMethods, branchLocations } from '@/data/catalog';
-import { formatKES } from '@/lib/format';
+import { formatKES, formatTSh } from '@/lib/format';
 import { useReveal } from '@/hooks/useReveal';
 import { supabase } from '@/lib/supabase';
 import { useLang } from '@/contexts/LanguageContext';
@@ -83,7 +83,7 @@ export default function Products() {
                       <span className="text-xs font-semibold uppercase tracking-wider text-forest-500">
                         {t.products.packSizes}
                       </span>
-                      <span className="text-xs text-forest-500">{t.products.from} {formatKES(cheapest)}</span>
+                      <span className="text-xs text-forest-500">{t.products.from} {formatKES(cheapest)} <span className="text-forest-400">/ {formatTSh(cheapest)}</span></span>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {p.packages.map((pk) => (
@@ -205,7 +205,7 @@ function OrderModal({
 
     // Build WhatsApp message
     const itemLines = cartItems
-      .map((item) => `  • ${item.qty} x ${item.size} @ KES ${item.price.toLocaleString()} = KES ${(item.price * item.qty).toLocaleString()}`)
+      .map((item) => `  • ${item.qty} x ${item.size} @ KES ${item.price.toLocaleString()} (TSh ${Math.round(item.price * 18).toLocaleString()}) = KES ${(item.price * item.qty).toLocaleString()} (TSh ${Math.round(item.price * item.qty * 18).toLocaleString()})`)
       .join('\n');
     const paymentLine = `\nPayment: ${paymentMethods.find((m) => m.id === paymentMethod)?.label}`;
     const notesLine = notes.trim() ? `\nDelivery destination: ${notes.trim()}` : '';
@@ -220,7 +220,7 @@ function OrderModal({
       `*Items Ordered:*`,
       itemLines,
       ``,
-      `*TOTAL: KES ${grandTotal.toLocaleString()}*`,
+      `*TOTAL: KES ${grandTotal.toLocaleString()} (TSh ${Math.round(grandTotal * 18).toLocaleString()})*`,
       `${paymentLine}${notesLine}`,
     ].join('\n');
 
@@ -329,13 +329,13 @@ function OrderModal({
                       <span className="text-forest-700">
                         {item.qty} × {item.size} <span className="text-forest-400">@ {formatKES(item.price)}</span>
                       </span>
-                      <span className="font-semibold text-forest-900">{formatKES(item.price * item.qty)}</span>
+                      <span className="font-semibold text-forest-900">{formatKES(item.price * item.qty)} <span className="text-xs font-normal text-forest-500">{formatTSh(item.price * item.qty)}</span></span>
                     </div>
                   ))}
                 </div>
                 <div className="mt-3 flex items-center justify-between border-t border-forest-200 pt-3">
                   <span className="font-semibold text-forest-900">Total</span>
-                  <span className="font-display text-xl font-semibold text-forest-900">{formatKES(grandTotal)}</span>
+                  <span className="font-display text-xl font-semibold text-forest-900">{formatKES(grandTotal)} <span className="text-sm font-normal text-forest-500">{formatTSh(grandTotal)}</span></span>
                 </div>
               </div>
             )}

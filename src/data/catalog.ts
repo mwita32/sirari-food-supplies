@@ -287,6 +287,6 @@ export const company = {
   phoneTZ1: '+255 657 596 185',
   phoneTZ2: '+255 767 513 101',
   phoneKE: '+254 700 011 899',
-  phoneKE2: '+254 717108338',
-  email: 'info@sirarifoodsupply.co',
+  phoneKE2: '+254 717 108 338',
+  email: 'sirarifoods@gmail.com',
 };

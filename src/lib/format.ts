@@ -1,5 +1,11 @@
+const TSH_RATE = 20.00;
+
 export function formatKES(amount: number): string {
   return 'KES ' + amount.toLocaleString('en-KE');
+}
+
+export function formatTSh(amount: number): string {
+  return 'TSh ' + Math.round(amount * TSH_RATE).toLocaleString('en-KE');
 }
 
 export function todayISO(): string {
