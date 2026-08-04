@@ -73,8 +73,8 @@ export const translations = {
     },
     stays: {
       sectionLabel: 'Our guest houses',
-      headline: 'Stay where the rice grows',
-      body: 'Three retreats, three landscapes. Choose the river valley, the cool highlands, or the heart of town — then pick the room that suits your stay and your budget.',
+      headline: 'Find Your Perfect Stay in Sirari',
+      body: 'Choose from our three comfortable guest houses, each offering quality accommodation, warm hospitality, and a range of room options to suit your needs and budget.',
       from: 'from',
       perNight: '/night',
       chooseRoom: 'Choose your room',
@@ -257,8 +257,8 @@ export const translations = {
     },
     stays: {
       sectionLabel: 'Nyumba zetu za wageni',
-      headline: 'Kaa mahali ambapo mchele unakua',
-      body: 'Mapumziko matatu, mandhari matatu. Chagua bonde la mto, nyanda za juu zenye baridi, au moyo wa mji — kisha chagua chumba kinachofaa kwa kukaa kwako na bajeti yako.',
+      headline: 'Pata Malazi Yanayokufaa Sirari',
+      body: 'Chagua mojawapo ya nyumba zetu tatu za wageni zinazotoa malazi bora, ukarimu wa dhati, na aina mbalimbali za vyumba vinavyokidhi mahitaji na bajeti yako.',
       from: 'kuanzia',
       perNight: '/usiku',
       chooseRoom: 'Chagua chumba chako',

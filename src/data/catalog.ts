@@ -62,7 +62,7 @@ export const guestHouses: GuestHouse[] = [
     id: 'riverside',
     name: 'Tanzanite',
     location: 'mara,mara, Tanzania',
-    blurb: 'A serene riverside retreat surrounded by lush rice paddies.',
+    blurb: 'Experience comfort, convenience, and genuine Tanzanian hospitality in a peaceful setting close to local attractions and services.',
     description:
        'Welcome to Tanzanite Hotel, where modern comfort meets genuine hospitality. Enjoy clean, spacious rooms, excellent service, and a peaceful atmosphere in a convenient town location—perfect for business travellers, families, and visitors seeking a relaxing stay.',
     image: '/images/tanzanite.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
