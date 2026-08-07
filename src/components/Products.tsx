@@ -220,7 +220,7 @@ function OrderModal({
       `*Items Ordered:*`,
       itemLines,
       ``,
-      `*TOTAL: KES ${grandTotal.toLocaleString()} (TSh ${Math.round(grandTotal * 18).toLocaleString()})*`,
+      `*TOTAL: KES ${grandTotal.toLocaleString()} (TSh ${Math.round(grandTotal * 20.00).toLocaleString()})*`,
       `${paymentLine}${notesLine}`,
     ].join('\n');
 
