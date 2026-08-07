@@ -205,7 +205,7 @@ function OrderModal({
 
     // Build WhatsApp message
     const itemLines = cartItems
-      .map((item) => `  • ${item.qty} x ${item.size} @ KES ${item.price.toLocaleString()} (TSh ${Math.round(item.price * 20).toLocaleString()}) = KES ${(item.price * item.qty).toLocaleString()} (TSh ${Math.round(item.price * item.qty * 18).toLocaleString()})`)
+      .map((item) => `  • ${item.qty} x ${item.size} @ KES ${item.price.toLocaleString()} (TSh ${Math.round(item.price * 20.00).toLocaleString()}) = KES ${(item.price * item.qty).toLocaleString()} (TSh ${Math.round(item.price * item.qty * 18).toLocaleString()})`)
       .join('\n');
     const paymentLine = `\nPayment: ${paymentMethods.find((m) => m.id === paymentMethod)?.label}`;
     const notesLine = notes.trim() ? `\nDelivery destination: ${notes.trim()}` : '';
